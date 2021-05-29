@@ -4,10 +4,38 @@
   justify-content: center;
 }
 .chart{
-  width: 600px;
-  height: 400px;
+  width: 580px;
+}
+.year-cont{
+  display: flex;
+  justify-content: flex-end;
+  align-items: self-end;
+}
+.year-dropdown{
+  margin-right: 20px;
+  margin-top: 20px;
+  border: 1px solid;
+  padding: 5px;
+  width: 56px;
 }
 
+.table-heading{
+  display: flex;
+  justify-content: space-between;
+}
+.heading{
+  padding-bottom: 20px;
+  color: #5f6070;
+}
+.table{
+  font-size: 14px;
+  border-radius: 10px;
+  width: 700px;
+}
+.tablehead{
+  background-color: #007aff;
+  color: white;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

@@ -50,9 +50,10 @@ function LineChart() {
             intersect: false,
         },
         scales: {
+
             y: {
                 min: 10,
-                max: 80,
+                stepSize: 10,
                 ticks:
                 {
                     callback: function (value) {
@@ -72,12 +73,16 @@ function LineChart() {
                 maxHeight: 90,
                 title: {
                     display: true,
-                    text: 'Revenue'
+                    text: 'Revenue',
+                    font: {
+                        size: 18
+                    }
                 },
                 labels: {
                     boxWidth: 10,
                     boxHeight: 10,
-                    padding: 30
+                    padding: 30,
+                    borderColor: ['#D1D5DB']
                 }
             },
             tooltip: {
@@ -118,8 +123,13 @@ function LineChart() {
 
     return (
         <div>
+            <div className="year-cont">
+                <div className="year-dropdown">
+                    Year</div>
+
+            </div>
             <Line data={data} options={options} />
-        </div >
+        </div>
     )
 }
 

@@ -79,10 +79,11 @@ const ListItemTextStyle = withStyles(() => ({
 
 const UseStyle = makeStyles({
     root: {
-        width: 350,
+        width: 390,
         paddingLeft: 5,
         color: '#4B5563',
         borderRadius: 15,
+        margin: 15,
     },
     head: {
         padding: 20,
@@ -93,7 +94,8 @@ const UseStyle = makeStyles({
         borderColor: '#E5E7EB',
         borderStyle: 'solid',
         borderRadius: 10,
-        padding: 0,
+        padding: 3,
+        height: 66,
     },
     filled: {
         alignItems: 'flex-end',

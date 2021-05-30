@@ -79,7 +79,7 @@ const ListItemTextStyle = withStyles(() => ({
 
 const UseStyle = makeStyles({
     root: {
-        width: 380,
+        width: 350,
         paddingLeft: 5,
         color: '#4B5563',
         borderRadius: 15,
@@ -93,8 +93,7 @@ const UseStyle = makeStyles({
         borderColor: '#E5E7EB',
         borderStyle: 'solid',
         borderRadius: 10,
-        padding: 3,
-        paddingLeft: 6,
+        padding: 0,
     },
     filled: {
         alignItems: 'flex-end',
@@ -111,7 +110,7 @@ function TopProducts() {
                     subheader="see all" />
 
                 <List className={styleClass.head}>
-                    {products.map((product, i) => (
+                    {products.map((product) => (
                         <ListItem className={styleClass.body} key={product.id}>
                             <ListItemAvatar>
                                 <img

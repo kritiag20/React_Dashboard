@@ -9,14 +9,15 @@ import TopProducts from './TopProducts';
 import RecentOrder from './RecentOrder';
 import ProductStatus from './ProductStatus';
 
-function Main() {
 
+function Main() {
 
     return (
         <div className="wrapper">
             <div className="menu-section">
                 <SideMenu />
             </div>
+            
             <div className="body-section">
                 <div className="graphs">
                     <div className="prod-summary">
@@ -34,9 +35,7 @@ function Main() {
                 </div>
                 <div className="product">
                     <div className="prod">
-                        <div className="chart">
-                            <LineChart />
-                        </div>
+                        <LineChart />
                     </div>
                     <div className="prod">
                         <TopProducts />

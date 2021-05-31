@@ -1,7 +1,7 @@
 import React from 'react'
 import {
-    Drawer, List, SvgIcon, ListItem,withStyles,
-    ListItemIcon, ListItemText, makeStyles
+    Drawer, List, SvgIcon, ListItem, withStyles,
+    ListItemIcon, ListItemText, makeStyles, Typography, CardHeader
 } from "@material-ui/core";
 import ListAltIcon from '@material-ui/icons/ListAlt';
 import LocalMallOutlinedIcon from '@material-ui/icons/LocalMallOutlined'
@@ -67,10 +67,6 @@ const menuStyle = makeStyles((theme) => ({
     root: {
         display: 'flex',
     },
-    appBar: {
-        width: `calc(100% - ${drawerWidth}px)`,
-        marginLeft: drawerWidth,
-    },
     drawer: {
         width: drawerWidth,
         flexShrink: 0,
@@ -78,6 +74,22 @@ const menuStyle = makeStyles((theme) => ({
     drawerPaper: {
         width: drawerWidth,
     },
+    body: {
+        display: 'flex',
+        padding: 15, 
+    },
+    text: {
+        color: '#007aff',
+        display: 'inline',
+        paddingRight: 0,
+        fontWeight: 700,
+    },
+    text1: {
+        color: '#24ccb8',
+        display: 'inline',
+        fontWeight: 700,
+        paddingLeft: 1,
+    }
 }));
 
 function SideMenu() {
@@ -86,7 +98,18 @@ function SideMenu() {
 
     return (
         <div>
-            <Drawer className={style.drawer} variant="permanent" classes={{ paper: style.drawerPaper }} anchor="left">
+            <Drawer className={style.drawer} variant="permanent"
+                classes={{ paper: style.drawerPaper }} anchor="left">
+
+                <Typography className={style.body}>
+                    <Typography variant="h4" className={style.text}>
+                        Big
+                    </Typography>
+                    <Typography variant="h4" className={style.text1}>
+                        Bazzar
+                    </Typography>
+                </Typography>
+
                 <List button>
                     {menuList.map((menu) => (
                         <StyledMenuItem key={menu.id}>

@@ -1,10 +1,11 @@
 import React from 'react';
 import {
-    makeStyles, withStyles, AppBar, Toolbar,
-    IconButton, InputBase, Badge
+    makeStyles, withStyles, AppBar, Toolbar, ListItem, List, Paper,
+    IconButton, InputBase, Badge, ListItemAvatar, Avatar, ListItemText
 } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import NotificationsNoneIcon from '@material-ui/icons/NotificationsNone';
+import AvatarImg from '../Images/avatar.jpeg'
 
 const useStyles = makeStyles((theme) => ({
     grow: {
@@ -56,15 +57,20 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     sectionDesktop: {
-        display: 'none',
         [theme.breakpoints.up('md')]: {
             display: 'flex',
         },
         backgroundColor: '#fff',
+        marginRight: 20,
+        borderRadius: 5,
     },
     toolbar: {
         padding: 0,
         paddingRight: 20,
+    },
+    root:{
+        width: '20%',
+        paddingLeft: 10,
     }
 }));
 
@@ -76,9 +82,24 @@ const StyleAppBar = withStyles(() => ({
 
 const StyleIconButton = withStyles(() => ({
     root: {
-        padding: 8,
+        padding: 10,
     },
 }))(IconButton)
+
+const StyleList = withStyles(() => ({
+    root: {
+        padding: 0,
+    },
+    body: {
+        fontSize: 14,
+    }
+}))(List)
+
+const StyleListItem = withStyles(() => ({
+    root: {
+        padding: 0,
+    },
+}))(ListItem)
 
 export default function NavBar() {
     const classes = useStyles();
@@ -105,20 +126,23 @@ export default function NavBar() {
                     <div className={classes.sectionDesktop}>
                         <StyleIconButton color="inherit">
                             <Badge variant="dot" overlap="circle" color="secondary">
-                                <NotificationsNoneIcon style={{ color: '#000', fontSize: 26 }} />
+                                <NotificationsNoneIcon style={{ color: '#000', fontSize: 30 }} />
                             </Badge>
                         </StyleIconButton>
-
-                        {/* <IconButton
-                            edge="end"
-                            aria-label="account of current user"
-                            aria-controls={menuId}
-                            aria-haspopup="true"
-                            color="inherit"
-                        >
-                            <AccountCircle />
-                        </IconButton> */}
                     </div>
+                    <Paper className={classes.root}>
+                        <StyleList>
+                            <StyleListItem>
+                                <ListItemAvatar>
+                                    <Avatar variant="rounded" src={AvatarImg}>
+                                        
+                                    </Avatar>
+                                </ListItemAvatar>
+                                <ListItemText
+                                    primary="Ismail Hossain" secondary="Seller Account" />
+                            </StyleListItem>
+                        </StyleList>
+                    </Paper>
                 </Toolbar>
             </StyleAppBar>
 

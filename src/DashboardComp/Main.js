@@ -8,6 +8,7 @@ import LineChart from './LineChart';
 import TopProducts from './TopProducts';
 import RecentOrder from './RecentOrder';
 import ProductStatus from './ProductStatus';
+import NavBar from './NavBar';
 
 
 function Main() {
@@ -17,8 +18,9 @@ function Main() {
             <div className="menu-section">
                 <SideMenu />
             </div>
-            
+
             <div className="body-section">
+                <NavBar />
                 <div className="graphs">
                     <div className="prod-summary">
                         <TotalRevenue />

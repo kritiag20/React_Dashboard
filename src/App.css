@@ -5,6 +5,7 @@
 }
 .menu-section{
   width: 15%;
+  background-color: cornsilk;
 }
 .body-section{
   width: 85%;
@@ -24,25 +25,64 @@
   display: grid;
   grid-template-columns:  32% 68%;
 }
-
-.year-cont{
-  display: flex;
-  justify-content: flex-end;
-  align-items: self-end;
-}
-.year-dropdown{
-  margin-right: 20px;
-  margin-top: 20px;
-  border: 1px solid;
-  padding: 5px;
-  width: 56px;
+.summary-graph{
+  width: 270px,
 }
 
-.heading{
-  padding-bottom: 20px;
-  color: #5f6070;
+@media (min-width: 320px) and (max-width: 480px) {
+  .wrapper{
+    width: 100%;
+    height: 100%;
+  }
+  .menu-section{
+    display: none;
+  }
+  .body-section{
+    width: 100%;
+    height: 100%;
+  background-color:darkgrey;
+  }
+  .graphs{
+    display: block;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+  .prod-summary{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100%;
+  }
+  .summary-graph{
+    width: 300px,
+  }
 }
-.tablehead{
-  background-color: #007aff;
-  color: white;
+@media (min-width: 481px) and (max-width: 767px) {
 }
+@media (min-width: 768px) and (max-width: 1160px) {
+  .menu-section{
+    width: 22%;
+    background-color: cornsilk;
+  }
+  .body-section{
+    width: 78%;
+    background-color: #E5E7EB;
+  }
+  .summary-graph{
+    width: 200px;
+  }
+}
+@media (min-width: 1161px) {
+  
+
+  
+}
+
+/* @media only screen and (max-width: 390px) {
+}
+@media only screen and (min-width: 391px) and (max-width: 600px) {
+}
+@media only screen and (min-width: 601px) and (max-width: 930px) {
+}
+@media only screen and (min-width: 930px) and (max-width: 1230px){
+} */
+

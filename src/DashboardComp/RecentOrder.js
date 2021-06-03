@@ -39,8 +39,8 @@ const rows = [
 
 const CardHead = withStyles(() => ({
     root: {
-        paddingLeft:0,
-        paddingRight:0,
+        paddingLeft: 0,
+        paddingRight: 0,
     },
     title: {
         fontSize: 18,
@@ -75,16 +75,42 @@ const styling = makeStyles({
         height: 330,
     },
     text: {
+        height: 35,
+        padding: 10,
+        width: 120,
+    },
+    text1: {
         color: '#F1BF0D',
         backgroundColor: '#FEEBA6',
-        margin: 10,
+        padding: '8px 30px',
+        width: 85,
         textAlign: 'center',
-        paddingInline: 20,
-    }
+    },
+    text2: {
+        color: '#24ccb8',
+        backgroundColor: '#C3EBE6',
+        padding: '8px 30px',
+        width: 85,
+        textAlign: 'center',
+    },
 })
 
 function RecentOrder() {
     const Styleclass = styling();
+
+    let val = rows.length;
+    let style = [];
+
+    for (let i = 0; i < val; i++) {
+        if ((i % 2 == 0)) {
+            style.push(Styleclass.text1)
+        }
+        else {
+            style.push(
+                Styleclass.text2
+            )
+        }
+    }
 
     return (
         <Card className={Styleclass.root}>
@@ -105,7 +131,7 @@ function RecentOrder() {
                     </TableHead>
 
                     <TableBody>
-                        {rows.map((row) => (
+                        {rows.map((row,index) => (
                             <StyledTableRow className={Styleclass.rowStyles} key={row.orderno}>
                                 <StyledTableCell component="th" scope="row">
                                     {row.orderno}
@@ -113,7 +139,12 @@ function RecentOrder() {
                                 <StyledTableCell align="left">{row.date}</StyledTableCell>
                                 <StyledTableCell align="left">{row.cus_name}</StyledTableCell>
                                 <StyledTableCell align="left">{row.price}</StyledTableCell>
-                                <StyledTableCell className={Styleclass.text} align="left">{row.status}</StyledTableCell>
+                                <StyledTableCell className={Styleclass.text} align="left">
+                                    <TableCell className={style[index]}>
+                                        {row.status}
+                                    </TableCell>
+                                    
+                                </StyledTableCell>
                             </StyledTableRow>
                         ))}
                     </TableBody>

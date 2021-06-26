@@ -5,7 +5,7 @@
 }
 .menu-section{
   width: 15%;
-  background-color: cornsilk;
+  /* background-color: cornsilk; */
 }
 .body-section{
   width: 85%;
@@ -53,7 +53,7 @@
     flex-basis: 100%;
   }
   .summary-graph{
-    width: 300px,
+    width: 270px,
   }
 }
 @media (min-width: 481px) and (max-width: 767px) {

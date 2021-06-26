@@ -52,7 +52,7 @@ function HomeIcon(props) {
 
 const drawerWidth = 220;
 
-const StyledMenuItem = withStyles((theme) => ({
+const StyledListItem = withStyles((theme) => ({
     root: {
         '&:focus': {
             backgroundColor: theme.palette.primary.main,
@@ -112,14 +112,14 @@ function SideMenu() {
 
                 <List button>
                     {menuList.map((menu) => (
-                        <StyledMenuItem key={menu.id}>
+                        <StyledListItem key={menu.id}>
                             <ListItemIcon>
                                 {menu.image}
                             </ListItemIcon>
                             <ListItemText>
                                 {menu.name}
                             </ListItemText>
-                        </StyledMenuItem>
+                        </StyledListItem>
                     ))}
                 </List>
             </Drawer>

@@ -20,7 +20,7 @@ function Main() {
             </div>
 
             <div className="body-section">
-                <NavBar />
+                  <NavBar /> 
                 <div className="graphs">
                     <div className="prod-summary">
                         <TotalRevenue />

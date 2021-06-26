@@ -8,7 +8,7 @@ const datas = [1, 0.8, 1.7, 1.2, 2, 1.2, 2.1];
 
 const UseStyle = makeStyles({
     root: {
-        width: 270,
+        width:270,
         paddingLeft: 10,
         color: '#818891',
         borderRadius: 10,
@@ -89,7 +89,7 @@ function TotalRevenue() {
     return (
 
         <div>
-            <Card className={styleClass.root}>
+            <Card className="summary-graph" classes={{root: styleClass.root}}>
                 <StyleCardHeader title="Total Revenue" subheader="$8,521" />
                 <Line data={data} options={options} />
             </Card>
